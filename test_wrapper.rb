@@ -40,7 +40,6 @@ examples = [
 
 separator_length = examples.map do |e|
   ProcWrapper.new(e).run {
-    p ["_:", _].join(" ")
     _[1].split("\n").map do |s| s.length end.max
   }
 end.max
